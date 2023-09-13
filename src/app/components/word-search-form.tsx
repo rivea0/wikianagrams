@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-export default function WordSearchForm({ onSubmitData }: { 
+export default function WordSearchForm({ onSubmitData }: {
   onSubmitData: (formData: FormData) => void
 }) {
   const [word, setWord] = useState('')
@@ -25,7 +25,7 @@ export default function WordSearchForm({ onSubmitData }: {
             value={word} 
             onChange={e => setWord(e.currentTarget.value)} 
             placeholder="Search for a word" 
-            className="placeholder:text-slate-400 block w-full border border-san-marino-200 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-san-marino-400 focus:ring-san-marino-400 focus:ring-1 sm:text-sm"
+            className="placeholder:text-slate-400 block w-full border border-san-marino-200 dark:border-san-marino-600 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-san-marino-400 focus:ring-san-marino-400 focus:ring-1 sm:text-sm"
           />
         </label>
         <button 

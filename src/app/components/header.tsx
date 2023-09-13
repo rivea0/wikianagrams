@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import ThemeSwitcher from './theme-switcher'
 
 export default function Header() {
   const [toggle, setToggle] = useState(false)
@@ -12,7 +13,7 @@ export default function Header() {
   
   return (
     <>
-      <nav className="mb-10 mt-1">
+      <nav className="mb-10 mt-2">
         <div className="w-full mx-auto">
           <div className="mx-2 flex flex-wrap items-center justify-between">
             <Link href="/" className="flex">
@@ -43,14 +44,15 @@ export default function Header() {
               </button>
             </div>
             <div className={`${toggle ? 'hidden' : ''} md:mr-2 md:flex justify-between items-end w-full md:w-auto md:order-1`} id="mobile-menu-3">
-              <ul className="flex-col items-end md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-                <li>
-                  <Link href="/about" className="md:bg-transparent text-san-marino-950 block pl-3 pr-4 py-2 md:text-san-marino-950 md:p-0 rounded">About</Link>
+              <ul className="flex-col items-center md:flex-row flex md:gap-4 mt-4 md:mt-0 md:text-sm md:font-medium">
+                <li className='border border-slate-200 dark:border-slate-800 md:border-none w-full pl-3'>
+                  <ThemeSwitcher />
+                </li>
+                <li className='border border-slate-200 dark:border-slate-800 md:border-none w-full'>
+                  <Link href="/about" className="md:bg-transparent text-san-marino-950 dark:text-white block pl-3 pr-4 py-2 md:text-san-marino-950 md:p-0 rounded">About</Link>
                 </li>
               </ul>
             </div>
-
-
           </div>
         </div>
       </nav>

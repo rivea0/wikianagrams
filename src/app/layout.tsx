@@ -1,9 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import Header from './components/header'
 import Footer from './components/footer'
-const inter = Inter({ subsets: ['latin'] })
+import ThemeProvider from './components/theme-provider'
+const dm_sans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'WikiAnagrams',
@@ -17,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} text-san-marino-950 h-screen flex flex-col`}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${dm_sans.className} text-san-marino-950 bg-slate-50 h-screen flex flex-col dark:bg-slate-950 dark:text-white`}>
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
