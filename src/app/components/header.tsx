@@ -5,12 +5,13 @@ import { useState } from 'react'
 import ThemeSwitcher from './theme-switcher'
 
 export default function Header() {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(true)
 
   function handle() {
     setToggle(prevToggle => !prevToggle)
   }
   
+  /* Navbar adapted from https://tailwindcomponents.com/component/responsive-tailwind-css-navbar-1 */
   return (
     <>
       <nav className="mb-10 mt-2">
@@ -30,7 +31,7 @@ export default function Header() {
             {/* <Link href="/about" className="text-slate-900 block pl-3 pr-4 py-2 rounded">About</Link> */}
             <div className="flex md:hidden md:order-2">
               <button data-collapse-toggle="mobile-menu-3" type="button"
-                className="md:hidden text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
+                className="md:hidden text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-san-marino-300 rounded-lg inline-flex items-center justify-center"
                 aria-controls="mobile-menu-3" aria-expanded="false" onClick={handle}>
                 <span className="sr-only">Open main menu</span>
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
