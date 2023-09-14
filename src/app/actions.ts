@@ -14,5 +14,6 @@ export async function handleSubmit(formData: FormData) {
     }
   } catch (err) {
     console.error('Something went wrong')
+    return []
   }
 }

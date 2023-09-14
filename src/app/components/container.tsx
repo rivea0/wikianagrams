@@ -15,13 +15,13 @@ export default function Container() {
 
   async function onSubmitData(formData: FormData) {
     const anagramsResult = await handleSubmit(formData)
-    if (anagramsResult !== undefined) { setAnagrams(anagramsResult) }
+    anagramsResult && setAnagrams(anagramsResult)
   }
 
   return (
     <div className='flex flex-col'>
       <WordSearchForm onSubmitData={onSubmitData} />
-      {anagrams && <AnagramList anagrams={anagrams} />}
+      <AnagramList anagrams={anagrams} />
     </div>
   )
 }
