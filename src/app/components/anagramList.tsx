@@ -1,9 +1,24 @@
+import Link from 'next/link'
+import { AnagramType } from './container'
+
 export default function AnagramList({ anagrams }: { 
-  anagrams: string[] 
+  anagrams: (AnagramType | undefined)[]
 }) {
   return (
     <ul>
-      {anagrams.map(anagram => <li key={anagram}>{anagram}</li>)}
+      {anagrams && anagrams.map((anagram) => (
+        anagram && (
+          <li key={anagram.text}>
+            <Link
+              href={anagram.link}
+              target="_blank"
+
+            >
+              {anagram.text}
+            </Link>
+          </li>
+        )
+      ))}
     </ul>
   )  
 }

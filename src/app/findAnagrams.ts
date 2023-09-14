@@ -12,8 +12,14 @@ export default function findAnagrams(body: string) {
 
     return sibling.firstChild.childNodes
       .filter(el => el.nodeType === 1 && (el as HTMLElement).tagName.toLowerCase() === 'span')
-      .map(item => (item as HTMLElement).textContent)
-
+      .map(span => {
+        if ((span as HTMLElement).firstChild.nodeType === 1) {
+          return {
+            text: (span as HTMLElement).firstChild.textContent,
+            link: `https://en.wiktionary.org${((span as HTMLElement).firstChild as HTMLElement).attrs.href}`
+          }
+        }
+      })
     // return headings
     //     .filter(h => (h.firstChild as HTMLElement)?.id === 'Anagrams')[0].nextElementSibling.firstChild.childNodes
     //     .filter(el => el.nodeType === 1 && (el as HTMLElement).rawTagName === 'span')

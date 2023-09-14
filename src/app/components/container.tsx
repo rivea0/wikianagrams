@@ -5,8 +5,13 @@ import { handleSubmit } from '../actions'
 import AnagramList from './anagramList'
 import WordSearchForm from './word-search-form'
 
+export type AnagramType = {
+  text: string,
+  link: string
+}
+
 export default function Container() {
-  const [anagrams, setAnagrams] = useState<string[]>([])
+  const [anagrams, setAnagrams] = useState<(AnagramType | undefined)[]>([])
 
   async function onSubmitData(formData: FormData) {
     const anagramsResult = await handleSubmit(formData)
@@ -16,7 +21,7 @@ export default function Container() {
   return (
     <div className='flex flex-col'>
       <WordSearchForm onSubmitData={onSubmitData} />
-      <AnagramList anagrams={anagrams} />
+      {anagrams && <AnagramList anagrams={anagrams} />}
     </div>
   )
 }
