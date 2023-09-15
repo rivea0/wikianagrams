@@ -14,7 +14,7 @@ export default function NotFound() {
           </span>
         </Link>
       </div>
-      <p className="italic text-xs mb-8 text-slate-500">404 image: <Link href="https://storyset.com/web" className='underline decoration-san-marino-500'>Web illustrations by Storyset</Link></p>
+      <p className="italic text-xs mb-8 text-slate-500">404 image: <Link href="https://storyset.com/web" className="underline decoration-san-marino-500">Web illustrations by Storyset</Link></p>
     </div>
   )
 }
