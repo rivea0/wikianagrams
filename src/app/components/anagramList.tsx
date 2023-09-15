@@ -3,11 +3,11 @@ import { AnagramType } from './container'
 import AnagramNotFound from './anagram-not-found'
 
 export default function AnagramList({ anagrams }: { 
-  anagrams: (AnagramType | undefined)[]
+  anagrams: (AnagramType | undefined)[] | null
 }) {
   return (
     <div className='flex flex-col justify-center items-center'>
-      {anagrams.length === 0 && <AnagramNotFound />}
+      {anagrams && anagrams.length === 0 && <AnagramNotFound />}
       <ul className="grid grid-cols-2 gap-4 mt-8 md:grid-cols-3">
         {anagrams && anagrams.map((anagram) => (
           anagram && (

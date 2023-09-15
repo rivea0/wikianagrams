@@ -11,7 +11,7 @@ export type AnagramType = {
 }
 
 export default function Container() {
-  const [anagrams, setAnagrams] = useState<(AnagramType | undefined)[]>([])
+  const [anagrams, setAnagrams] = useState<(AnagramType | undefined)[] | null>(null)
 
   async function onSubmitData(formData: FormData) {
     const anagramsResult = await handleSubmit(formData)
