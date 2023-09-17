@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://wikianagrams.vercel.app',
     siteName: 'WikiAnagrams',
     images: [
-      '/wikianagrams-og.jpg'
+      '/img/wikianagrams-og.jpg'
     ],
     locale: 'en_US',
     type: 'website',
