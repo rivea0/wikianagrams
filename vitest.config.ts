@@ -9,5 +9,8 @@ export default defineConfig({
     globals: true, // use `describe, it, test` without importing them
     environment: 'jsdom',
     setupFiles: './__tests__/setup.ts',
+    css: {
+      include: /.+/
+    }
   },
 })

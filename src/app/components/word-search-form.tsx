@@ -28,7 +28,7 @@ export default function WordSearchForm({ onSubmitData }: {
             className="placeholder:text-slate-400 block w-full border border-san-marino-200 dark:border-san-marino-600 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-san-marino-400 focus:ring-san-marino-400 focus:ring-1 sm:text-sm"
           />
         </label>
-        <button 
+        <button
           type="submit" 
           className="mt-2 w-fit px-2 py-1 rounded bg-san-marino-500 text-san-marino-50 hover:bg-san-marino-600"
         >
