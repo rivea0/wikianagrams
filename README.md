@@ -7,8 +7,9 @@
 
 ### Demo:
 
-<video src=https://github.com/rivea0/wikianagrams/assets/58330360/8b9209be-538b-43a4-8c7a-2036183633ef width="50%">
-</video>
+
+https://github.com/rivea0/wikianagrams/assets/58330360/72b8d5e0-8daf-4675-9f21-8d296aa9b0c9
+
 
 <br>
 
