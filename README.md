@@ -4,8 +4,7 @@ A simple tool to find anagrams of a word from its [Wiktionary](https://en.wiktio
 
 ### Demo:
 
-<video controls autoplay width="50%">
-  <source src="./readme/wikianagrams-demo.mov" />
+<video src=https://github.com/rivea0/wikianagrams/assets/58330360/9632106c-9710-4346-8683-dc758fd19d22 width="50%">
 </video>
 
 <br>
