@@ -7,6 +7,7 @@ import ThemeProvider from './components/theme-provider'
 const dm_sans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://wikianagrams.vercel.app'),
   title: 'WikiAnagrams',
   description: 'Find anagrams from Wiktionary',
 }
