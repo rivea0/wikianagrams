@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="mt-auto flex flex-col items-center">
-      <div className="flex gap-2" data-testid="icons">
+      <div className="flex gap-4" data-testid="icons">
         <Link href="https://github.com/rivea0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
