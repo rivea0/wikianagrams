@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/img/wikianagrams-og.jpg" alt="Wikianagrams" width="50%" />
+  <img src="./public/img/wikianagrams-og.jpg" alt="Wikianagrams" width="500" />
   <br>
   <p>A simple tool for finding anagrams of a word from its <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a> page.</p>
   <br>
