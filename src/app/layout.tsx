@@ -9,17 +9,6 @@ const dm_sans = DM_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'WikiAnagrams',
   description: 'Find anagrams from Wiktionary',
-  openGraph: {
-    title: 'WikiAnagrams',
-    description: 'Find anagrams from Wiktionary',
-    url: 'https://wikianagrams.vercel.app',
-    siteName: 'WikiAnagrams',
-    images: [
-      '/img/wikianagrams-og.jpg'
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
 }
 
 
