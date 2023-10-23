@@ -1,15 +1,26 @@
 'use client'
 
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
+import LoadingBtnContent from './loading-btn-content'
 
 export default function WordSearchForm({ onSubmitData }: {
   onSubmitData: (formData: FormData) => void
 }) {
   const [word, setWord] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmitData(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    let formData = new FormData()
+    formData.append('word', (e.currentTarget[0] as HTMLFormElement).value)
+    setLoading(true)
+    await onSubmitData(formData)
+    setLoading(false)
+  }
 
   return (
     <>
-      <form action={onSubmitData} className="flex flex-col items-center gap-2 rounded py-2 px-4">
+      <form onSubmit={handleSubmitData} className="flex flex-col items-center gap-2 rounded py-2 px-4">
         <label className="relative block">
           <span className="sr-only">Search</span>
           <span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -31,8 +42,10 @@ export default function WordSearchForm({ onSubmitData }: {
         <button
           type="submit" 
           className="mt-2 w-fit px-2 py-1 rounded bg-san-marino-500 text-san-marino-50 hover:bg-san-marino-600"
+          disabled={loading}
         >
-          Find anagrams
+          {loading && <LoadingBtnContent />}
+          {!loading && 'Find anagrams'}
         </button>
       </form>
     </>
