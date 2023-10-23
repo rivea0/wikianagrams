@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import AnagramList from '@/app/components/anagramList'
+import AnagramList from '@/app/components/anagram-list'
 
 const resultOne = [{
   text: 'argaman',

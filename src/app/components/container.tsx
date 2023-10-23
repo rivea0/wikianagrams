@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { handleSubmit } from '../actions'
-import AnagramList from './anagramList'
+import AnagramList from './anagram-list'
 import WordSearchForm from './word-search-form'
 
 export type AnagramType = {
