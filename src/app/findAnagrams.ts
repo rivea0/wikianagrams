@@ -10,12 +10,12 @@ export default function findAnagrams(body: string) {
     const sibling = anagramHeading.nextElementSibling
     if (!sibling) { return [] }
 
-    return sibling.firstChild.childNodes
+    return sibling.firstChild?.childNodes
       .filter(el => el.nodeType === 1 && (el as HTMLElement).tagName.toLowerCase() === 'span')
       .map(span => {
-        if ((span as HTMLElement).firstChild.nodeType === 1) {
+        if ((span as HTMLElement).firstChild?.nodeType === 1) {
           return {
-            text: (span as HTMLElement).firstChild.textContent,
+            text: (span as HTMLElement).firstChild?.textContent,
             link: `https://en.wiktionary.org${((span as HTMLElement).firstChild as HTMLElement).attrs.href}`
           }
         }
