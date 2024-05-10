@@ -6,7 +6,7 @@ import AnagramList from './anagram-list'
 import WordSearchForm from './word-search-form'
 
 export type AnagramType = {
-  text: string,
+  text: string | undefined,
   link: string
 }
 
