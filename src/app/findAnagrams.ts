@@ -3,13 +3,11 @@ import { parse, HTMLElement } from 'node-html-parser'
 export default function findAnagrams(body: string) {
     const root = parse(body)
     const headings = root.querySelectorAll('h3')
-
-    const anagramHeading = headings.find(h => (h.firstChild as HTMLElement)?.id === 'Anagrams')
+    const anagramHeading = headings.find(h => h.id === 'Anagrams')
     if (!anagramHeading) { return [] }
 
-    const sibling = anagramHeading.nextElementSibling
+    const sibling = anagramHeading.parentNode.nextElementSibling
     if (!sibling) { return [] }
-
     return sibling.firstChild?.childNodes
       .filter(el => el.nodeType === 1 && (el as HTMLElement).tagName.toLowerCase() === 'span')
       .map(span => {
