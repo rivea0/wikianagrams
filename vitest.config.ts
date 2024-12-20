@@ -1,9 +1,9 @@
-/// <reference types='vitest' />
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-export default defineConfig({
+/** @type {import('vite').UserConfig} */
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
   plugins: [react(), tsconfigPaths()],
   test: {
     globals: true, // use `describe, it, test` without importing them
@@ -13,4 +13,4 @@ export default defineConfig({
       include: /.+/
     }
   },
-})
+}
