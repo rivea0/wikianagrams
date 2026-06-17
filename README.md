@@ -4,7 +4,6 @@
   <p>A simple tool for finding anagrams of a word from its <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a> page.</p>
   <br>
 
-![GitHub deployments](https://img.shields.io/github/deployments/rivea0/wikianagrams/production?logo=vercel&logoColor=white&label=vercel&labelColor=5b5b5b&color=3faf44)
 ![GitHub](https://img.shields.io/github/license/rivea0/wikianagrams?color=3f72af)
 </div>
 
